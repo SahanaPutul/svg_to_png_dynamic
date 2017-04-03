@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+
+        <style>
+            .svg-container { 
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                padding-bottom: 100%; 
+                vertical-align: middle; 
+                overflow: hidden; 
+            }
+            .svg-content { 
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var values = document.getElementsByName('txt')[0].value.split(',');
+                var count = 0;
+                for (var a = 0; a < values.length; a++) {
+                    //document.writeln(values[a]);
+                    count++;
+                }
+                if (count == 6) {
+                    var toggle = ["svg_3", "svg_5", "svg_7", "svg_8", "svg_9", "svg_10","svg_11", "svg_12", "svg_13", "svg_14", "svg_15", "svg_16","svg_17", "svg_18", "svg_19", "svg_23", "svg_20", "svg_21", "svg_22", "svg_23", "svg_24", "svg_25"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "visible";
+                    }
+                    document.getElementById("svg_25").innerHTML = values[0];
+                    document.getElementById("svg_22").innerHTML = values[1];
+                    document.getElementById("svg_21").innerHTML = values[2];
+                    document.getElementById("svg_20").innerHTML = values[3];
+                    document.getElementById("svg_23").innerHTML = values[4];
+                    document.getElementById("svg_24").innerHTML = values[5];
+                }
+                if (count == 5) {
+                    var toggle = ["svg_20", "svg_8", "svg_11"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "hidden";
+                    }
+                    
+                    var toggle = ["svg_3", "svg_5", "svg_7",, "svg_9", "svg_10", "svg_12", "svg_13", "svg_14", "svg_15", "svg_16","svg_17", "svg_18", "svg_19", "svg_23", "svg_21", "svg_22", "svg_23", "svg_24", "svg_25"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "visible";
+                    }
+                    document.getElementById("svg_25").innerHTML = values[0];
+                    document.getElementById("svg_22").innerHTML = values[1];
+                    document.getElementById("svg_21").innerHTML = values[2];
+                    document.getElementById("svg_23").innerHTML = values[3];
+                    document.getElementById("svg_24").innerHTML = values[4];
+                }
+                if (count == 4) {
+                    var toggle = ["svg_5","svg_10","svg_16", "svg_17", "svg_18", "svg_19", "svg_22", "svg_24"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "hidden";
+                    }
+                    var toggle = ["svg_3", "svg_7", "svg_8", "svg_9","svg_11", "svg_12", "svg_13", "svg_14", "svg_15","svg_23", "svg_20", "svg_21", "svg_23", "svg_25"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "visible";
+                    }
+                    document.getElementById("svg_25").innerHTML = values[0];
+                    document.getElementById("svg_21").innerHTML = values[1];
+                    document.getElementById("svg_20").innerHTML = values[2];
+                    document.getElementById("svg_23").innerHTML = values[3];
+                }
+                if (count == 3) {
+                    var toggle = ["svg_7", "svg_8", "svg_9","svg_11", "svg_12", "svg_13", "svg_14", "svg_15","svg_20", "svg_21", "svg_23"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "hidden";
+                    }
+                    var toggle = ["svg_3", "svg_5", "svg_10", "svg_16","svg_17", "svg_18", "svg_19", "svg_22", "svg_24", "svg_25"],
+                            l = toggle.length, i;
+                    for (i = 0; i < l; i++) {
+                        document.getElementById(toggle[i]).style.visibility = "visible";
+                    }
+                    document.getElementById("svg_25").innerHTML = values[0];
+                    document.getElementById("svg_22").innerHTML = values[1];
+                    document.getElementById("svg_24").innerHTML = values[2];
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+<!--        <svg width="100%" height="100%">
+        <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+        <feFlood flood-color="yellow"/>
+        <feComposite in="SourceGraphic"/>
+    </filter>
+    </defs>
+    <text filter="url(#solid)" x="20" y="50" font-size="50">solidsdfsfsdfsdf background</text>
+    </svg>-->
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="col-sm-offset-2 col-sm-10 ">
+                <div class="col-sm-3 col-xs-8">
+                    <input class="form-control form-inline" type="text" name="txt" id="tx" placeholder="Enter values"/>
+                </div>
+                <div class="col-sm-2 col-xs-2">
+                    <button class="btn btn-success" name="btn" onclick="myFunction()">Enter</button>
+                </div>
+            </div>
+            <div class="col-sm-offset-2 col-sm-6">
+                <!--                    <h1 class="text-center">hello</h1>-->
+
+                <!--                    <svg width="436" height="180"
+                    style="border:solid 6px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <text x="0%" y="50%" textLength="100%">blablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</text>
+                </svg>-->
+
+                <div class="svg-container">
+                    <svg  version="1.1" viewBox="0 0 500 500" 
+                          preserveAspectRatio="xMinYMin meet"  class="svg-content">
+                    <g stroke="null">
+                    <title stroke="null">Layer 1</title>
+                    <rect id="svg_3" height="48" width="135" y="311" x="209" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <rect id="svg_5" height="45" width="118" y="206" x="58" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <rect id="svg_7" height="45" width="118" y="118.5" x="59" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <rect id="svg_8" height="45" width="118" y="40.5" x="217" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <rect id="svg_9" height="45" width="118" y="124.5" x="365" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <rect id="svg_10" height="45" width="118" y="212.5" x="367" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_11" y2="310" x2="275" y1="88" x1="271" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_12" y2="142" x2="236" y1="309" x1="257" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_13" y2="143" x2="306" y1="309" x1="287" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line stroke="#000000" id="svg_14" y2="143" x2="178" y1="144" x1="237" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+                    <line id="svg_15" y2="144" x2="365" y1="144" x1="305" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_16" y2="227" x2="223" y1="309" x1="243" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_17" y2="233" x2="323" y1="309" x1="298" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line id="svg_18" y2="228" x2="177" y1="228" x1="224" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                    <line stroke="#000000" id="svg_19" y2="235" x2="368" y1="234" x1="322" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" fill="none"/>
+                    <text style="cursor: move;" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_20" y="60" x="275" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">923998753</text>
+                    <text id="svg_21" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="160.75159" x="115.01563" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">9238753</text>
+                    <text id="svg_22" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="273.21634" x="114.01563" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">9238753</text>
+                    <text id="svg_23" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="168.50778" x="420.01563" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">9238753</text>
+                    <text id="svg_24" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="284.85063" x="429.01563" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">9238753</text>
+                    <text id="svg_25" stroke="#000000" transform="matrix(1,0,0,0.773575692552285,0,20.70212463011609) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="414.12046" x="274.01563" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">9238753</text>
+                    </g>
+                    </svg>
+                </div>
+
+
+
+
+
+                <!--                    <div class="svg-container">
+                                        <svg version="1.1" viewBox="0 0 500 500" 
+                                             preserveAspectRatio="xMinYMin meet" class="svg-content">
+                                        <circle fill="#F7941E" stroke="#231F20" stroke-width="10" 
+                                                stroke-miterlimit="10" cx="250" cy="250" r="200" opacity="0.6" />
+                                        </svg>
+                                    </div>
+                
+                                    <table>
+                                        <ul>
+                                            <li>
+                                                <div class="svg-container">
+                                                    <svg version="1.1" viewBox="0 0 500 500" 
+                                                         preserveAspectRatio="xMinYMin meet" class="svg-content">
+                                                     Created with SVG-edit - http://svg-edit.googlecode.com/ 
+                                                    <g>
+                                                    <title>Layer 1</title>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" x1="277" y1="346" x2="245" y2="260" id="svg_2"/>
+                                                    <line fill="none" stroke-width="5" x1="245" y1="263" x2="199" y2="263" id="svg_3" stroke="#000000"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="314" y1="344" x2="361" y2="260" id="svg_5"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="360" y1="260" x2="413" y2="262" id="svg_6"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="286" y1="343" x2="260" y2="212" id="svg_7"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="260" y1="214" x2="200" y2="212" id="svg_8"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="300" y1="342" x2="345" y2="213" id="svg_9"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="344" y1="214" x2="412" y2="214" id="svg_10"/>
+                                                    <line fill="none" stroke="#000000" stroke-width="5" stroke-dasharray="null" x1="292" y1="342" x2="294" y2="157" id="svg_11"/>
+                                                    <rect id="svg_1" height="44" width="140" y="100" x="81" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                
+                                                    <rect x="0" y="0" width="100" height="100" stroke-width="5" stroke="#000000" fill="none"></rect>
+                                                    <text x="0" y="50" font-family="Verdana" font-size="35" fill="blue">Hello</text>
+                                                    </g>
+                                                    </svg>
+                                                </div>
+                                            </li>
+                                        </ul>
+                
+                                    </table>
+                
+                                    <svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
+                                     Created with SVG-edit - http://svg-edit.googlecode.com/ 
+                                    <g stroke="null">
+                                    <title stroke="null">Layer 1</title>
+                                    <rect id="svg_1" height="44" width="140" y="100" x="81" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5" stroke="#000000" fill="none"/>
+                                    </g>
+                                    </svg>
+                                                        <img src="draw.svg"/>
+                                    <svg class="center-block" width="800" height="400" style="background-color: white">
+                                    <rect width="300" height="300" fill="red" style="stroke:blue; stroke-width:2px"/>
+                
+                                    <line x1="80" y1="130" x2="130" y2="130" style="stroke:green; stroke-width:5px;"/>
+                                    <line x1="130" y1="130" x2="200" y2="290" style="stroke:green; stroke-width:5px;"/>
+                
+                                    <line x1="300" y1="130" x2="350" y2="130" style="stroke:green; stroke-width:5px;"/>
+                                    <line x1="300" y1="130" x2="230" y2="290" style="stroke:green; stroke-width:5px;"/>
+                
+                                    <rect width="100" height="50" x="165" y="290" style="stroke:red;stroke-width:5px;fill:white"/>
+                                    <rect width="130" height="40" x="-30" y="110" style="stroke:red;stroke-width:5px;fill:white"></rect>
+                                    <rect width="130" height="40" x="350" y="110" style="stroke:red;stroke-width:5px;fill:white"></rect>
+                
+                                    </svg>-->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquary-2.2.0.min.js"></script>
+</body>
+</html>
